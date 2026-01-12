@@ -1,0 +1,6 @@
+@Interview_FollowUp_Core.Service_HostAddress = http://localhost:5051
+
+GET {{Interview_FollowUp_Core.Service_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
