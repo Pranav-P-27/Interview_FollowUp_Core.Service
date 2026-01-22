@@ -1,3 +1,6 @@
+using Interview_FollowUp_Core.Service.Interface;
+using Interview_FollowUp_Core.Service.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddSingleton<IGuidService, GuidService>();
+builder.Services.AddScoped<IGuidService, GuidService>();
+
 
 var app = builder.Build();
 
