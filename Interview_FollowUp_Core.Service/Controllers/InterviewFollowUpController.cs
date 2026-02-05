@@ -14,6 +14,12 @@ namespace Interview_FollowUp_Core.Service.Controllers
 
         }
 
+        public void UseanyMethod()
+        {
+            GenericMethod("Test");
+            GenericMethod(1);
+
+        }
         public void WhatisDictionary()
         {
             // Dictionary is a collection of key-value pairs
@@ -38,6 +44,26 @@ namespace Interview_FollowUp_Core.Service.Controllers
             {
                 Console.WriteLine("Key: {0}, Value: {1}", de.Key, de.Value);
             }
+        }
+
+        public void GenericCollection()
+        {
+            // Generic collection is a collection that can store any type of data
+            List<string> list = new List<string>();
+            list.Add("One");
+            list.Add("Two");
+            list.Add("Three");
+            foreach (string str in list)
+            {
+                Console.WriteLine("Value: {0}", str);
+            }
+        }
+
+
+        public void GenericMethod<T>(T param)
+        {
+            var a= param;
+
         }
     }
 }
