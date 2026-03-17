@@ -8,9 +8,14 @@ namespace Interview_FollowUp_Core.Service.Controllers
     [Route("api/[controller]")]
     public class InterviewDetailsController : Controller
     {
-        public IActionResult Index()
+       
+
+
+        [HttpGet]
+        public IActionResult GetInterviewDetails()
         {
-            return View();
+            
+            return Ok("Interview details fetched successfully.");
         }
     }
 }
