@@ -1,3 +1,4 @@
+using Interview_FollowUp_Core.Service.Helper;
 using Interview_FollowUp_Core.Service.Interface;
 using Interview_FollowUp_Core.Service.Services;
 
@@ -16,7 +17,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<IGuidService, GuidService>();
 builder.Services.AddScoped<IGuidService, GuidService>();
-
+builder.Services.AddScoped<CheckConnectivity>();
 
 var app = builder.Build();
 
