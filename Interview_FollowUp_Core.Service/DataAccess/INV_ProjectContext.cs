@@ -19,7 +19,7 @@ public partial class INV_ProjectContext : DbContext
     {
         modelBuilder.Entity<Interview>(entity =>
         {
-            entity.HasKey(e => e.InterviewId);
+            entity.HasKey(e => e.InterviewId).HasName("PK__Intervie__C97C5852FA888676");
 
             entity.Property(e => e.CompanyName)
                 .IsRequired()
